@@ -87,6 +87,9 @@
 // };
 // export default Header;
 
+
+
+
 import React, { useState } from "react";
 import {
   AppBar,
@@ -127,45 +130,51 @@ const Header = () => {
     <React.Fragment>
       <AppBar sx={{ background: "#F5F5F5" }}>
         <Toolbar>
-          <img src="/logo192.png" alt="" width="50px" />
-          {isMatch ? (
-            <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
-              FAV SHOP
-            </Typography>
-          ) : (
-            <>
-              <Tabs
-                sx={{ marginLeft: "auto" }}
-                indicatorColor="secondary"
-                textColor="inherit"
-                value={value}
-                onChange={handleChange}
-              >
-                <Link to="/products">
-                  <Tab label="Products" />
-                </Link>
-                <Link to="/services">
-                  <Tab label="Services" />
-                </Link>
-                <Link to="/aboutus">
-                  <Tab label="About Us" />
-                </Link>
-                <Link to="/contact">
-                  <Tab label="Contact" />
-                </Link>
-              </Tabs>
-              <Link to="/login">
-                <Button sx={{ marginLeft: "auto" }} variant="contained">
-                  Login
-                </Button>
+          <img
+            src="https://previews.123rf.com/images/mamun25g/mamun25g2007/mamun25g200701238/151666824-fs-letter-logo-design-f-a-letter-icon-vector-design-fs-logo-fs-logo-letter-initial-monogram-capital.jpg"
+            alt=""
+            width="50px"
+          />
+          {/* {isMatch ? ( */}
+          <Typography
+            sx={{ fontSize: "2rem", paddingLeft: "10%", color: "black" }}
+          >
+            <b>FAV SHOP</b>
+          </Typography>
+          {/* ) : ( */}
+          <>
+            <Tabs
+              sx={{ marginLeft: "auto" }}
+              indicatorColor="secondary"
+              textColor="inherit"
+              value={value}
+              onChange={handleChange}
+            >
+              <Link to="/products">
+                <Tab label="Products" />
               </Link>
-              <Link to="/signup">
-                <Button sx={{ marginLeft: "10px" }} variant="contained">
-                  SignUp
-                </Button>
+              <Link to="/services">
+                <Tab label="Services" />
               </Link>
-            </>
-          )}
+              <Link to="/aboutus">
+                <Tab label="About Us" />
+              </Link>
+              <Link to="/contact">
+                <Tab label="Contact" />
+              </Link>
+            </Tabs>
+            <Link to="/login">
+              <Button sx={{ marginLeft: "auto" }} variant="contained">
+                Login
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button sx={{ marginLeft: "10px" }} variant="contained">
+                SignUp
+              </Button>
+            </Link>
+          </>
+          {/* )} */}
         </Toolbar>
       </AppBar>
       {!isMatch && (
@@ -178,4 +187,5 @@ const Header = () => {
     </React.Fragment>
   );
 };
+
 export default Header;

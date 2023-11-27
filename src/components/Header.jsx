@@ -1,3 +1,6 @@
+
+
+
 // import React, { useState } from "react";
 // import {
 //   AppBar,
@@ -12,11 +15,10 @@
 // import { Link } from "react-router-dom";
 
 // const Header = () => {
-//   const [value, setValue] = useState(0); // Initialize value state
+//   const [value, setValue] = useState(0);
 //   const theme = useTheme();
 //   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
-//   // Map the pages to their corresponding index in the Tabs
 //   const pageToTabIndex = {
 //     Products: 0,
 //     Services: 1,
@@ -24,7 +26,6 @@
 //     ContactUs: 3,
 //   };
 
-//   // Map the index in Tabs to the corresponding page
 //   const tabIndexToPage = {
 //     0: "Products",
 //     1: "Services",
@@ -38,57 +39,65 @@
 
 //   return (
 //     <React.Fragment>
-//       <AppBar sx={{ background: "#063970" }}>
+//       <AppBar sx={{ background: "#F5F5F5" }}>
 //         <Toolbar>
-//           <img src="/logo192.png" alt="" width="50px" />
-//           {isMatch ? (
-//             <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
-//               Shoppee
-//             </Typography>
-//           ) : (
-//             <>
-//               <Tabs
-//                 sx={{ marginLeft: "auto" }}
-//                 indicatorColor="secondary"
-//                 textColor="inherit"
-//                 value={value}
-//                 onChange={handleChange}
-//               >
+//           <img
+//             src="https://previews.123rf.com/images/mamun25g/mamun25g2007/mamun25g200701238/151666824-fs-letter-logo-design-f-a-letter-icon-vector-design-fs-logo-fs-logo-letter-initial-monogram-capital.jpg"
+//             alt=""
+//             width="50px"
+//           />
+//           <Typography
+//             sx={{ fontSize: "2rem", paddingLeft: "10%", color: "black" }}
+//           >
+//             <b>FAV SHOP</b>
+//           </Typography>
+//           <div style={{ marginLeft: "auto", display: "flex", alignItems: "center" }}>
+//             <Tabs
+//               sx={{ marginLeft: "auto" }}
+//               indicatorColor="secondary"
+//               textColor="inherit"
+//               value={value}
+//               onChange={handleChange}
+//             >
+//               <Link to="/products">
 //                 <Tab label="Products" />
+//               </Link>
+//               <Link to="/services">
 //                 <Tab label="Services" />
+//               </Link>
+//               <Link to="/aboutus">
 //                 <Tab label="About Us" />
+//               </Link>
+//               <Link to="/contact">
 //                 <Tab label="Contact" />
-//               </Tabs>
+//               </Link>
+//             </Tabs>
+//             <div style={{ marginLeft: "auto", display: "flex", gap: "10px" }}>
 //               <Link to="/login">
-//                 <Button sx={{ marginLeft: "auto" }} variant="contained">
-//                   Login
-//                 </Button>
+//                 <Button variant="contained">Login</Button>
+//               </Link>
+//               <Link to="/logout">
+//                 <Button variant="contained">Logout</Button>
 //               </Link>
 //               <Link to="/signup">
-//                 <Button sx={{ marginLeft: "10px" }} variant="contained">
-//                   SignUp
-//                 </Button>
+//                 <Button variant="contained">SignUp</Button>
 //               </Link>
-//             </>
-//           )}
+//             </div>
+//           </div>
 //         </Toolbar>
 //       </AppBar>
 //       {!isMatch && (
-//         /* Render content based on the selected page */
 //         <div style={{ padding: "20px" }}>
 //           <Typography variant="h4">
 //             {`Content for ${tabIndexToPage[value]} page`}
 //           </Typography>
-//           {/* Add your page-specific content here */}
 //         </div>
 //       )}
 //     </React.Fragment>
 //   );
 // };
+
 // export default Header;
-
-
-
 
 import React, { useState } from "react";
 import {
@@ -135,14 +144,18 @@ const Header = () => {
             alt=""
             width="50px"
           />
-          {/* {isMatch ? ( */}
           <Typography
             sx={{ fontSize: "2rem", paddingLeft: "10%", color: "black" }}
           >
             <b>FAV SHOP</b>
           </Typography>
-          {/* ) : ( */}
-          <>
+          <div
+            style={{
+              marginLeft: "auto",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <Tabs
               sx={{ marginLeft: "auto" }}
               indicatorColor="secondary"
@@ -163,18 +176,18 @@ const Header = () => {
                 <Tab label="Contact" />
               </Link>
             </Tabs>
-            <Link to="/login">
-              <Button sx={{ marginLeft: "auto" }} variant="contained">
-                Login
-              </Button>
-            </Link>
-            <Link to="/signup">
-              <Button sx={{ marginLeft: "10px" }} variant="contained">
-                SignUp
-              </Button>
-            </Link>
-          </>
-          {/* )} */}
+            <div style={{ marginLeft: "auto", display: "flex", gap: "10px" }}>
+              <Link to="/login">
+                <Button variant="contained">Login</Button>
+              </Link>
+              <Link to="/logout">
+                <Button variant="contained">Logout</Button>
+              </Link>
+              <Link to="/signup">
+                <Button variant="contained">SignUp</Button>
+              </Link>
+            </div>
+          </div>
         </Toolbar>
       </AppBar>
       {!isMatch && (

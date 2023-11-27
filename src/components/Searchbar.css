@@ -1,0 +1,33 @@
+/* Add this to your Main.css file or your styling file */
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    width: 300px; /* Adjust the width as needed */
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Search {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #007BFF; /* Blue color, you can change it */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }

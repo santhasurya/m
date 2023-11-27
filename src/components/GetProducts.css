@@ -1,0 +1,33 @@
+.wrapper{
+    display: grid;
+    flex-direction: column;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(12rem,16rem));
+    justify-content: center;
+}
+.title{
+    text-align: center;
+    font-style:oblique;
+    font-size:larger;
+    color: darkblue;
+}
+.value{
+    text-align:center;
+    font-style:oblique;
+}
+.cart{
+    background-color:black;
+    color: black;
+}
+.stock{
+    font-style:oblique;
+}
+.t{
+    background-image: "https://img.freepik.com/free-photo/mixed-fruits-with-apple-banana-orange-other_74190-938.jpg?w=1060&t=st=1700589209~exp=1700589809~hmac=f6580e146ec838c4b95040f759085c1a481fff0695d22a55bacb2b0b6da40aa2";
+    padding: 10px;
+}
+.purch{
+    margin-left: 50px;
+    color: black;
+    background-color:azure;
+}

@@ -87,6 +87,7 @@ const Header = () => {
               <Link to="/signup">
                 <Button variant="contained">SignUp</Button>
               </Link>
+              
             </div>
           </div>
         </Toolbar>

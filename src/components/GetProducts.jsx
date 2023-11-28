@@ -107,6 +107,7 @@ export default function Veggie() {
         img="https://img.freepik.com/free-psd/music-mockup_23-2147696085.jpg?size=626&ext=jpg&ga=GA1.1.1515574406.1700475824&semt=ais"
         title="Headphone"
         size=" : Small / Big"
+      
         price="$20"
         stock="10"/>
         <Card1
